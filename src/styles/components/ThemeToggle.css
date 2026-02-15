@@ -1,0 +1,54 @@
+.theme-toggle-button {
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  z-index: 1000;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+/* Hide our custom theme toggle button on mobile devices */
+@media (max-width: 768px) {
+  /* We're changing this to prevent the button from hiding on mobile */
+  .theme-toggle-button {
+    /* Remove display: none to keep it visible */
+    /* But ensure it stays on right side */
+    right: 20px; 
+    left: auto;
+  }
+}
+
+/* Light mode - white button */
+.light-mode .theme-toggle-button {
+  background-color: white;
+  color: #4b5563;
+}
+
+/* Dark mode - black button */
+.dark-mode .theme-toggle-button {
+  background-color: #121212; 
+  color: #fcd34d;
+}
+
+.light-mode .theme-toggle-button:hover {
+  background-color: #f3f4f6;
+}
+
+.dark-mode .theme-toggle-button:hover {
+  background-color: #1e1e1e;
+}
+
+.toggle-icon {
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

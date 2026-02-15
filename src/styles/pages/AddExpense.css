@@ -1,0 +1,818 @@
+/* Add Expense Page Styles - Modern Luxury Finance Theme */
+
+.add-expense-page {
+  min-height: 100vh;
+  width: 100%;
+  padding: clamp(1rem, 5vw, 2rem) clamp(0.5rem, 3vw, 2rem) clamp(4rem, 10vh, 7rem);
+  transition: var(--transition-default);
+  background: var(--color-background);
+  color: var(--color-textPrimary);
+}
+
+/* Container for all expense content */
+.add-expense-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Header styling */
+.add-expense-header {
+  text-align: center;
+  margin-bottom: clamp(1.5rem, 5vw, 2.5rem);
+}
+
+.add-expense-header h1 {
+  font-size: clamp(2rem, 5.5vw, 2.8rem);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, var(--color-error) 0%, #FF6B6B 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.add-expense-header p {
+  font-size: clamp(1rem, 2.2vw, 1.3rem);
+  color: var(--color-textSecondary);
+  opacity: 0.9;
+}
+
+/* Main content layout */
+.add-expense-content {
+  display: flex;
+  gap: clamp(1rem, 4vw, 2rem);
+  width: 100%;
+}
+
+/* Sidebar styling */
+.add-expense-sidebar {
+  flex: 0 0 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Expense stats panel */
+.expense-stats-panel {
+  background-color: var(--color-cardBg);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: var(--card-shadow);
+  border: 1px solid var(--color-border);
+  transition: var(--transition-default);
+}
+
+.expense-stats-panel:hover {
+  box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.dark-mode .expense-stats-panel:hover {
+  box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+.expense-stat-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.expense-stat-item:last-child {
+  border-bottom: none;
+}
+
+.expense-stat-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  background-color: rgba(239, 68, 68, 0.1);
+  color: var(--color-error);
+}
+
+.expense-stat-details {
+  flex: 1;
+}
+
+.expense-stat-label {
+  font-size: 0.85rem;
+  color: var(--color-textSecondary);
+  margin-bottom: 0.3rem;
+}
+
+.expense-stat-value {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-textPrimary);
+}
+
+/* AI Tips panel */
+.ai-tips-panel {
+  background-color: var(--color-cardBg);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: var(--card-shadow);
+  border: 1px solid var(--color-border);
+}
+
+.ai-tips-header {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.ai-tips-icon {
+  font-size: 1.5rem;
+}
+
+.ai-tips-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-textPrimary);
+}
+
+.ai-tip-item {
+  background-color: rgba(239, 68, 68, 0.08);
+  padding: 1rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  border-left: 3px solid var(--color-error);
+}
+
+.ai-tip-text {
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: var(--color-textPrimary);
+}
+
+/* Main form area */
+.add-expense-main {
+  flex: 1;
+}
+
+/* Form panel styling */
+.add-expense-form-panel {
+  background-color: var(--color-cardBg);
+  border-radius: 16px;
+  padding: clamp(1.2rem, 4vw, 2rem);
+  box-shadow: var(--card-shadow);
+  border: 1px solid var(--color-border);
+  transition: var(--transition-default);
+}
+
+.add-expense-form-panel:hover {
+  box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.dark-mode .add-expense-form-panel:hover {
+  box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Form sections */
+.form-section {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.form-section:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.form-section h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  color: var(--color-error);
+}
+
+/* Form group */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--color-textPrimary);
+}
+
+/* Error state for fields */
+.form-group select.error-border,
+.form-group input.error-border,
+.form-group textarea.error-border {
+  border-color: var(--color-error);
+  box-shadow: 0 0 0 1px var(--color-error);
+}
+
+.field-error-message {
+  color: var(--color-error);
+  font-size: 0.8rem;
+  margin-top: 0.3rem;
+}
+
+/* Error states */
+.error-border {
+  border-color: var(--color-error) !important;
+  box-shadow: 0 0 0 1px var(--color-error) !important;
+}
+
+.field-error-message {
+  color: var(--color-error);
+  font-size: 0.8rem;
+  margin-top: 0.3rem;
+  font-weight: 500;
+}
+
+.error-container {
+  border-radius: 8px;
+  position: relative;
+}
+
+.error-container::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border: 1px dashed var(--color-error);
+  border-radius: 10px;
+  pointer-events: none;
+}
+
+/* Notes textarea */
+.notes-textarea {
+  width: 100%;
+  min-height: 80px;
+  padding: 0.85rem 1rem;
+  border-radius: 12px;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-secondaryBg);
+  color: var(--color-textPrimary);
+  font-size: 1rem;
+  resize: vertical;
+  transition: all 0.3s ease;
+}
+
+.notes-textarea:focus {
+  outline: none;
+  border-color: var(--color-error);
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2);
+}
+
+/* Amount input with animation */
+.amount-group {
+  position: relative;
+}
+
+.amount-input {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.currency-symbol {
+  position: absolute;
+  left: 1rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--color-textSecondary);
+}
+
+.amount-input input {
+  width: 100%;
+  padding: 0.95rem 1rem 0.95rem 2.2rem;
+  font-size: 1.2rem;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  background-color: var(--color-secondaryBg);
+  transition: all 0.3s ease;
+  color: var(--color-textPrimary);
+}
+
+.amount-input input:focus {
+  outline: none;
+  border-color: var(--color-error);
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2);
+}
+
+/* General form inputs */
+.form-group select,
+.form-group input[type="date"],
+.form-group input[type="text"],
+.form-group textarea {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border-radius: 12px;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-secondaryBg);
+  color: var(--color-textPrimary);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-group select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.7rem center;
+  background-size: 1em;
+  padding-right: 2rem;
+}
+
+.form-group select:focus,
+.form-group input[type="date"]:focus,
+.form-group input[type="text"]:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--color-error);
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2);
+}
+
+/* Custom reason styles */
+.custom-reason-group {
+  position: relative;
+}
+
+.reason-label-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.add-custom-reason-btn {
+  background: none;
+  border: none;
+  font-size: 0.9rem;
+  color: var(--color-error);
+  cursor: pointer;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.add-custom-reason-btn:hover {
+  background-color: rgba(239, 68, 68, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Enhanced custom reason styles */
+.reason-select-container {
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.custom-reason-group .reason-label-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.add-custom-reason-btn {
+  background: none;
+  border: none;
+  font-size: 0.9rem;
+  color: var(--color-error);
+  cursor: pointer;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.add-custom-reason-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.add-custom-reason-btn:not(:disabled):hover {
+  background-color: rgba(239, 68, 68, 0.1);
+  transform: translateY(-2px);
+}
+
+.reason-select {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border-radius: 12px;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-secondaryBg);
+  color: var(--color-textPrimary);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.7rem center;
+  background-size: 1em;
+  padding-right: 2rem;
+}
+
+.reason-select:focus {
+  outline: none;
+  border-color: var(--color-error);
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2);
+}
+
+.reason-select:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.select-category-first {
+  position: absolute;
+  right: 0;
+  top: -25px;
+  font-size: 0.8rem;
+  color: var(--color-warning);
+  font-style: italic;
+}
+
+.no-reasons-message {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  background-color: rgba(245, 158, 11, 0.1);
+  border-left: 3px solid var(--color-warning);
+  color: var(--color-textPrimary);
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.no-reasons-icon {
+  font-size: 1.1rem;
+}
+
+/* Form actions */
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.cancel-button {
+  padding: 0.85rem 1.8rem;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  background-color: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-textSecondary);
+  cursor: pointer;
+  transition: var(--transition-default);
+}
+
+.cancel-button:hover {
+  background-color: var(--color-hover);
+  transform: translateY(-2px);
+}
+
+.submit-button {
+  padding: 0.85rem 1.8rem;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition-default);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.expense-submit {
+  background: linear-gradient(135deg, var(--color-error) 0%, #FF6B6B 100%);
+  box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3);
+}
+
+.expense-submit:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(239, 68, 68, 0.4);
+}
+
+.submit-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* New Category Grid styling */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.category-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 0.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.category-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 0.3rem;
+  transition: all 0.3s ease;
+}
+
+.category-name {
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.category-check {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+}
+
+/* Enhanced account cards styling */
+.accounts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.account-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.2rem;
+  border-radius: 12px;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-secondaryBg);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.account-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .account-card:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.account-card.selected {
+  border-color: var(--color-error);
+  background-color: rgba(239, 68, 68, 0.05);
+}
+
+.account-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  background-color: rgba(239, 68, 68, 0.1);
+  flex-shrink: 0;
+}
+
+.account-details {
+  flex: 1;
+}
+
+.account-name {
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
+  color: var(--color-textPrimary);
+}
+
+.account-balance {
+  font-size: 0.9rem;
+  color: var(--color-textSecondary);
+}
+
+.account-check {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--color-error);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+}
+
+/* Add loading spinner styles */
+.accounts-loading {
+  padding: 2rem;
+  text-align: center;
+  background-color: var(--color-secondaryBg);
+  border-radius: 12px;
+  color: var(--color-textSecondary);
+  border: 1px dashed var(--color-border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.spinner {
+  width: 30px;
+  height: 30px;
+  border: 3px solid rgba(239, 68, 68, 0.2);
+  border-top-color: var(--color-error);
+  border-radius: 50%;
+  animation: spinner 1s linear infinite;
+}
+
+@keyframes spinner {
+  to { transform: rotate(360deg); }
+}
+
+/* Date input container */
+.date-input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.date-icon {
+  position: absolute;
+  left: 1rem;
+  font-size: 1rem;
+  opacity: 0.7;
+}
+
+.date-input {
+  padding-left: 2.5rem !important;
+}
+
+/* Enhanced button styling */
+.submit-icon {
+  font-size: 1.2rem;
+}
+
+.button-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* No accounts message */
+.no-accounts-message {
+  padding: 2rem;
+  text-align: center;
+  background-color: var(--color-secondaryBg);
+  border-radius: 12px;
+  color: var(--color-textSecondary);
+  border: 1px dashed var(--color-border);
+}
+
+.add-account-btn {
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  background-color: var(--color-error);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.add-account-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.2);
+}
+
+/* Money emoji animation position fix */
+.money-emoji {
+  position: absolute;
+  right: 1rem;
+  font-size: 1.2rem;
+}
+
+/* Responsive design */
+@media (max-width: 992px) {
+  .add-expense-content {
+    flex-direction: column;
+  }
+  
+  .add-expense-sidebar {
+    width: 100%;
+    order: 2;
+  }
+  
+  .add-expense-main {
+    order: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .add-expense-page {
+    padding: 1.5rem 1.5rem 6rem;
+  }
+  
+  .add-expense-container {
+    max-width: 100%;
+    padding: 0 0.8rem;
+  }
+  
+  .form-actions {
+    flex-direction: column-reverse;
+  }
+  
+  .cancel-button, .submit-button {
+    width: 100%;
+  }
+  
+  .expense-stats-panel, 
+  .ai-tips-panel,
+  .add-expense-form-panel {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .add-expense-page {
+    padding: 1rem 0.8rem 5rem;
+  }
+  
+  .add-expense-container {
+    padding: 0 1rem;
+  }
+  
+  .add-expense-form-panel {
+    padding: 1.2rem 1.2rem;
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
+  }
+  
+  .expense-stats-panel, 
+  .ai-tips-panel {
+    padding: 1.2rem;
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
+  }
+  
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

@@ -1,0 +1,210 @@
+/* Modal.css - Modal styling for the application */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.modal-content {
+  z-index: 1001;
+  width: 100%;
+  max-width: 500px;
+}
+
+.dark-mode.modal-overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal {
+  background: var(--light-card-bg);
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  max-height: 85vh;
+  overflow-y: auto;
+  position: relative;
+  animation: slideUp 0.3s ease;
+  border: 1px solid var(--light-border);
+}
+
+.dark-mode .modal {
+  background: var(--dark-card-bg);
+  border-color: var(--dark-border);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Modal header */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--light-border);
+}
+
+.dark-mode .modal-header {
+  border-bottom-color: var(--dark-border);
+}
+
+.modal-title {
+  margin: 0;
+  color: var(--light-text);
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.dark-mode .modal-title {
+  color: var(--dark-text);
+}
+
+/* Modal close button */
+.modal-close {
+  background: none;
+  border: none;
+  color: var(--light-text-secondary);
+  font-size: 1.5rem;
+  line-height: 1;
+  padding: 0.25rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dark-mode .modal-close {
+  color: var(--dark-text-secondary);
+}
+
+.modal-close:hover {
+  background-color: var(--light-hover-bg);
+  color: var(--light-text);
+}
+
+.dark-mode .modal-close:hover {
+  background-color: var(--dark-hover-bg);
+  color: var(--dark-text);
+}
+
+.modal-close-top-right {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+}
+
+/* Modal body */
+.modal-body {
+  padding: 1.5rem;
+}
+
+/* Modal types */
+.success-modal {
+  border-top: 5px solid var(--light-success);
+}
+
+.dark-mode .success-modal {
+  border-top-color: var(--dark-success);
+}
+
+.error-modal {
+  border-top: 5px solid var(--light-error);
+}
+
+.dark-mode .error-modal {
+  border-top-color: var(--dark-error);
+}
+
+.warning-modal {
+  border-top: 5px solid var(--light-warning);
+}
+
+.dark-mode .warning-modal {
+  border-top-color: var(--dark-warning);
+}
+
+.info-modal {
+  border-top: 5px solid var(--light-info);
+}
+
+.dark-mode .info-modal {
+  border-top-color: var(--dark-info);
+}
+
+/* Modal with glass effect */
+.glass-modal {
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.dark-mode .glass-modal {
+  background-color: rgba(30, 41, 59, 0.7);
+  border-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Responsive design */
+@media (max-width: 640px) {
+  .modal {
+    width: 95%;
+  }
+  
+  .modal-header,
+  .modal-body {
+    padding: 1rem;
+  }
+  
+  .modal-title {
+    font-size: 1.125rem;
+  }
+}
+
+/* Animation for modal elements */
+.modal-body > * {
+  animation: fadeSlide 0.3s ease forwards;
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+@keyframes fadeSlide {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Staggered animation for multiple children */
+.modal-body > *:nth-child(1) { animation-delay: 0.1s; }
+.modal-body > *:nth-child(2) { animation-delay: 0.2s; }
+.modal-body > *:nth-child(3) { animation-delay: 0.3s; }
+.modal-body > *:nth-child(4) { animation-delay: 0.4s; }
+.modal-body > *:nth-child(5) { animation-delay: 0.5s; }

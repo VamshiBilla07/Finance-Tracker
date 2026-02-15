@@ -1,0 +1,144 @@
+:root {
+  --color-primary: #111111;
+  --color-accent: #4A90E2;
+  --color-background: #F9FAFB;
+  --color-secondaryBg: #F1F3F5;
+  --color-cardBg: #FFFFFF;
+  --color-textPrimary: #111111;
+  --color-textSecondary: #555555;
+  --color-border: #D1D5DB;
+  --color-success: #3CB371;
+  --color-error: #FF6B6B;
+  --color-warning: #FFC107;
+  --color-dashboardGradient: linear-gradient(135deg, #4A90E2 0%, #111111 100%);
+  --color-incomePageBg: #ECFDF5;
+  --color-expensePageBg: #FEF2F2;
+  --color-budgetPageBg: #FFF7ED;
+
+  /* Wallet/Account card colors */
+  --color-wallet: #FFD580;
+  --color-bank: #4A90E2;
+  --color-gpay: #4A90E2;
+  --color-piggy: #E85D75;
+
+  /* Additional semantic colors */
+  --color-income: var(--color-success);
+  --color-expense: var(--color-error);
+  --color-shadow: rgba(0, 0, 0, 0.1);
+  --color-overlay: rgba(0, 0, 0, 0.5);
+
+  /* Glass effect */
+  --glassmorphism-bg: rgba(255, 255, 255, 0.8);
+  --glassmorphism-border: 1px solid rgba(255, 255, 255, 0.2);
+  --glassmorphism-backdrop-filter: blur(12px);
+  --card-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode {
+  --color-primary: #111111;
+  --color-accent: #4A90E2;
+  --color-background: #111111;
+  --color-secondaryBg: #222222;
+  --color-cardBg: #1C1C1C;
+  --color-textPrimary: #FFFFFF;
+  --color-textSecondary: #CCCCCC;
+  --color-border: #333333;
+  --color-success: #5EC07C;
+  --color-error: #E85D75;
+  --color-warning: #FFD580;
+  --color-dashboardGradient: linear-gradient(135deg, #1C1C1C 0%, #000000 100%);
+  --color-incomePageBg: #0A372B;
+  --color-expensePageBg: #3C1212;
+  --color-budgetPageBg: #302011;
+
+  --glassmorphism-bg: rgba(31, 31, 31, 0.7);
+  --glassmorphism-border: 1px solid rgba(255, 255, 255, 0.08);
+  --card-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Luxury card styles */
+.luxury-card {
+  background-color: var(--color-cardBg);
+  border-radius: 16px;
+  box-shadow: var(--card-shadow);
+  padding: 20px;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.luxury-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+}
+
+.dark-mode .luxury-card:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Account card colors */
+.wallet-card {
+  background-color: var(--color-wallet);
+  color: var(--color-textPrimary);
+}
+
+.bank-card {
+  background-color: var(--color-bank);
+  color: white;
+}
+
+.gpay-card {
+  background-color: var(--color-gpay);
+  color: white;
+}
+
+.piggy-card {
+  background-color: var(--color-piggy);
+  color: white;
+}
+
+/* Button styles */
+.btn {
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.dark-mode .btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-textPrimary);
+}
+
+.btn-accent {
+  background-color: var(--color-accent);
+  color: white;
+}
+
+.btn-success {
+  background-color: var(--color-success);
+  color: white;
+}
+
+.btn-error {
+  background-color: var(--color-error);
+  color: white;
+}
+
+/* Glass effect */
+.glass {
+  background: var(--glassmorphism-bg);
+  backdrop-filter: var(--glassmorphism-backdrop-filter);
+  -webkit-backdrop-filter: var(--glassmorphism-backdrop-filter);
+  border: var(--glassmorphism-border);
+}
+
+.dark-mode .glass {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}

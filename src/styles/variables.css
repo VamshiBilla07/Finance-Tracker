@@ -1,0 +1,57 @@
+:root {
+  /* Dark Mode */
+  --bg-dark: #111111;
+  --bg-card: #1C1C1C;
+  --bg-section: #222222;
+  --text-primary: #FFFFFF;
+  --text-secondary: #CCCCCC;
+  --accent-blue: #4A90E2;
+  --accent-green: #5EC07C;
+  --accent-red: #E85D75;
+  --accent-yellow: #FFD580;
+
+  /* Light Mode */
+  --bg-light: #F9FAFB;
+  --bg-card-light: #FFFFFF;
+  --bg-section-light: #F1F3F5;
+  --text-primary-light: #111111;
+  --text-secondary-light: #555555;
+  
+  /* Default Theme Variables (will be overridden by theme-specific ones) */
+  --color-background: var(--bg-light);
+  --color-cardBg: var(--bg-card-light);
+  --color-secondaryBg: var(--bg-section-light);
+  --color-textPrimary: var(--text-primary-light);
+  --color-textSecondary: var(--text-secondary-light);
+  
+  /* Accent colors - same for both themes */
+  --color-primary: var(--accent-blue);
+  --color-accent: var(--accent-blue);
+  --color-accent-hover: #3A80D2;
+  --color-success: var(--accent-green);
+  --color-success-hover: #4EB06C;
+  --color-error: var(--accent-red);
+  --color-error-hover: #D84D65;
+  --color-warning: var(--accent-yellow);
+  --color-warning-hover: #EFCB70;
+  
+  /* Other UI elements */
+  --color-border: rgba(0, 0, 0, 0.1);
+  --color-hover: rgba(0, 0, 0, 0.03);
+  --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  
+  /* Transitions */
+  --transition-default: all 0.3s ease;
+}
+
+/* Apply dark theme variables when dark-mode class is present */
+.dark-mode {
+  --color-background: var(--bg-dark);
+  --color-cardBg: var(--bg-card);
+  --color-secondaryBg: var(--bg-section);
+  --color-textPrimary: var(--text-primary);
+  --color-textSecondary: var(--text-secondary);
+  --color-border: rgba(255, 255, 255, 0.1);
+  --color-hover: rgba(255, 255, 255, 0.05);
+  --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}

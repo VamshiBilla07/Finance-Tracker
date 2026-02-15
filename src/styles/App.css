@@ -1,0 +1,135 @@
+/* Global size adjustments */
+html {
+  font-size: 17px;  /* Slightly increased base font size */
+}
+
+/* Responsive scaling */
+@media (max-width: 1200px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 992px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14.5px;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+/* Fix for chart containers */
+.chart-wrapper {
+  position: relative;
+  width: 100%;
+  max-height: 300px;
+}
+
+/* Offline indicator */
+.offline-indicator {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #ef4444;
+  color: white;
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  z-index: 2000;
+}
+
+/* Global text visibility fixes */
+.light-mode {
+  --text-primary: #1e293b;
+  --text-secondary: #475569;
+  --text-tertiary: #64748b;
+  --background-primary: #f8fafc;
+  --background-secondary: #f1f5f9;
+  --card-background: rgba(255, 255, 255, 0.8);
+  --border-color: rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode {
+  --text-primary: #f1f5f9;
+  --text-secondary: #cbd5e1;
+  --text-tertiary: #94a3b8;
+  --background-primary: #0f172a;
+  --background-secondary: #1e293b;
+  --card-background: rgba(30, 41, 59, 0.8);
+  --border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Apply text colors consistently across the app */
+body, p, h1, h2, h3, h4, h5, h6, span, div, button, input, select, textarea {
+  color: var(--text-primary);
+}
+
+.light-mode input, .light-mode select, .light-mode textarea {
+  color: var(--text-primary);
+  background-color: white;
+}
+
+.dark-mode input, .dark-mode select, .dark-mode textarea {
+  color: var(--text-primary);
+  background-color: #334155;
+}
+
+/* Fix for placeholder text */
+.light-mode ::placeholder {
+  color: var(--text-tertiary);
+  opacity: 0.7;
+}
+
+.dark-mode ::placeholder {
+  color: var(--text-tertiary);
+  opacity: 0.7;
+}
+
+/* Fix for secondary text */
+.text-secondary, .secondary-text, .subtitle, .description {
+  color: var(--text-secondary) !important;
+}
+
+/* Fix for input text contrast */
+.light-mode .form-control {
+  color: #333333;
+}
+
+.dark-mode .form-control {
+  color: #ffffff;
+}
+
+/* Ensure buttons have proper contrast */
+button {
+  color: inherit;
+}
+
+button.primary-button {
+  color: white;
+}
+
+/* Override any transparent text */
+[style*="color: transparent"] {
+  -webkit-text-fill-color: initial !important;
+  text-fill-color: initial !important;
+}
+
+/* Only allow transparent text for gradient text with proper fallback */
+h1[style*="background-clip: text"],
+h2[style*="background-clip: text"],
+h3[style*="background-clip: text"] {
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+}
