@@ -6,7 +6,7 @@ const CurrencyContext = createContext();
 export function CurrencyProvider({ children }) {
   const [currency, setCurrency] = useState('INR');
   const [currencySymbol, setCurrencySymbol] = useState('₹');
-  
+  const [dateFormat, setDateFormat] = useState('dd/MM/yyyy');
   
   // Load saved preferences from localStorage on initialization
   useEffect(() => {
